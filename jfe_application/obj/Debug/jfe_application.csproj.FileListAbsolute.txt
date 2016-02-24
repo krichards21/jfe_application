@@ -79,3 +79,4 @@ C:\Users\krichards\Documents\Visual Studio 2015\Projects\jfe_application\jfe_app
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\jfe_application\jfe_application\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\jfe_application\jfe_application\obj\Debug\jfe_application.dll
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\jfe_application\jfe_application\obj\Debug\jfe_application.pdb
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\jfe_application\jfe_application\obj\Debug\jfe_application.csprojResolveAssemblyReference.cache

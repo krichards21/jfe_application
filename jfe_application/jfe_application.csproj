@@ -200,12 +200,15 @@
     <Compile Include="Brand.cs">
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="BrandsController.cs" />
     <Compile Include="BrandType.cs">
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="BrandTypesController.cs" />
     <Compile Include="Classification.cs">
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClassificationsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -230,6 +233,7 @@
     <Compile Include="Manager.cs">
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="ManagersController.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -237,16 +241,20 @@
     <Compile Include="Region.cs">
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="RegionsController.cs" />
     <Compile Include="SalesRep.cs">
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="SalesRepsController.cs" />
     <Compile Include="SiteCall.cs">
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="SiteCallsController.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Store.cs">
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="StoresController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -326,6 +334,46 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\BrandTypes\Create.cshtml" />
+    <Content Include="Views\BrandTypes\Delete.cshtml" />
+    <Content Include="Views\BrandTypes\Details.cshtml" />
+    <Content Include="Views\BrandTypes\Edit.cshtml" />
+    <Content Include="Views\BrandTypes\Index.cshtml" />
+    <Content Include="Views\Brands\Create.cshtml" />
+    <Content Include="Views\Brands\Delete.cshtml" />
+    <Content Include="Views\Brands\Details.cshtml" />
+    <Content Include="Views\Brands\Edit.cshtml" />
+    <Content Include="Views\Brands\Index.cshtml" />
+    <Content Include="Views\Classifications\Create.cshtml" />
+    <Content Include="Views\Classifications\Delete.cshtml" />
+    <Content Include="Views\Classifications\Details.cshtml" />
+    <Content Include="Views\Classifications\Edit.cshtml" />
+    <Content Include="Views\Classifications\Index.cshtml" />
+    <Content Include="Views\Managers\Create.cshtml" />
+    <Content Include="Views\Managers\Delete.cshtml" />
+    <Content Include="Views\Managers\Details.cshtml" />
+    <Content Include="Views\Managers\Edit.cshtml" />
+    <Content Include="Views\Managers\Index.cshtml" />
+    <Content Include="Views\Regions\Create.cshtml" />
+    <Content Include="Views\Regions\Delete.cshtml" />
+    <Content Include="Views\Regions\Details.cshtml" />
+    <Content Include="Views\Regions\Edit.cshtml" />
+    <Content Include="Views\Regions\Index.cshtml" />
+    <Content Include="Views\SalesReps\Create.cshtml" />
+    <Content Include="Views\SalesReps\Delete.cshtml" />
+    <Content Include="Views\SalesReps\Details.cshtml" />
+    <Content Include="Views\SalesReps\Edit.cshtml" />
+    <Content Include="Views\SalesReps\Index.cshtml" />
+    <Content Include="Views\SiteCalls\Create.cshtml" />
+    <Content Include="Views\SiteCalls\Delete.cshtml" />
+    <Content Include="Views\SiteCalls\Details.cshtml" />
+    <Content Include="Views\SiteCalls\Edit.cshtml" />
+    <Content Include="Views\SiteCalls\Index.cshtml" />
+    <Content Include="Views\Stores\Create.cshtml" />
+    <Content Include="Views\Stores\Delete.cshtml" />
+    <Content Include="Views\Stores\Details.cshtml" />
+    <Content Include="Views\Stores\Edit.cshtml" />
+    <Content Include="Views\Stores\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

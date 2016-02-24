@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JFEModelStoreContainer" CdmEntityContainer="JFEEntities">
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="JFEModel.Brand">
+        <MappingFragment StoreEntitySet="Brand">
+          <ScalarProperty Name="brandTypeID" ColumnName="brandTypeID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="brand1" ColumnName="brand" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BrandTypes">
+      <EntityTypeMapping TypeName="JFEModel.BrandType">
+        <MappingFragment StoreEntitySet="BrandType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classifications">
+      <EntityTypeMapping TypeName="JFEModel.Classification">
+        <MappingFragment StoreEntitySet="Classification">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Managers">
+      <EntityTypeMapping TypeName="JFEModel.Manager">
+        <MappingFragment StoreEntitySet="Manager">
+          <ScalarProperty Name="managerRefNum" ColumnName="managerRefNum" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="JFEModel.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesReps">
+      <EntityTypeMapping TypeName="JFEModel.SalesRep">
+        <MappingFragment StoreEntitySet="SalesRep">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="managerID" ColumnName="managerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteCalls">
+      <EntityTypeMapping TypeName="JFEModel.SiteCall">
+        <MappingFragment StoreEntitySet="SiteCall">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="datetimeCall" ColumnName="datetimeCall" />
+          <ScalarProperty Name="classificationID" ColumnName="classificationID" />
+          <ScalarProperty Name="salesRepID" ColumnName="salesRepID" />
+          <ScalarProperty Name="storeID" ColumnName="storeID" />
+          <ScalarProperty Name="displayBrands" ColumnName="displayBrands" />
+          <ScalarProperty Name="coldBrands" ColumnName="coldBrands" />
+          <ScalarProperty Name="largestCases" ColumnName="largestCases" />
+          <ScalarProperty Name="coverage" ColumnName="coverage" />
+          <ScalarProperty Name="display" ColumnName="display" />
+          <ScalarProperty Name="currentCases" ColumnName="currentCases" />
+          <ScalarProperty Name="total750mlCold" ColumnName="total750mlCold" />
+          <ScalarProperty Name="schematicFacings" ColumnName="schematicFacings" />
+          <ScalarProperty Name="coldBox" ColumnName="coldBox" />
+          <ScalarProperty Name="pod" ColumnName="pod" />
+          <ScalarProperty Name="cbf" ColumnName="cbf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stores">
+      <EntityTypeMapping TypeName="JFEModel.Store">
+        <MappingFragment StoreEntitySet="Store">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="storeid" ColumnName="storeid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

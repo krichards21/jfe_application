@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JFEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="brand1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BrandType" Relationship="JFEModel.BrandBrandType" FromRole="Brand" ToRole="BrandType" />
+    <NavigationProperty Name="SiteCall" Relationship="JFEModel.BrandSiteCall" FromRole="Brand" ToRole="SiteCall" />
+    <NavigationProperty Name="SiteCall1" Relationship="JFEModel.BrandSiteCall1" FromRole="Brand" ToRole="SiteCall" />
+    <Property Name="brandTypeID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BrandType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Brand" Relationship="JFEModel.BrandBrandType" FromRole="BrandType" ToRole="Brand" />
+  </EntityType>
+  <EntityType Name="Classification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="SiteCall" Relationship="JFEModel.SiteCallClassification" FromRole="Classification" ToRole="SiteCall" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="RegionID" Type="Int32" />
+    <NavigationProperty Name="Region" Relationship="JFEModel.RegionManager" FromRole="Manager" ToRole="Region" />
+    <NavigationProperty Name="SalesReps" Relationship="JFEModel.ManagerSalesRep" FromRole="Manager" ToRole="SalesRep" />
+    <Property Name="managerRefNum" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Managers" Relationship="JFEModel.RegionManager" FromRole="Region" ToRole="Manager" />
+  </EntityType>
+  <EntityType Name="SalesRep">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="managerID" Type="Int32" />
+    <NavigationProperty Name="Manager" Relationship="JFEModel.ManagerSalesRep" FromRole="SalesRep" ToRole="Manager" />
+    <NavigationProperty Name="SiteCall" Relationship="JFEModel.SiteCallSalesRep" FromRole="SalesRep" ToRole="SiteCall" />
+  </EntityType>
+  <EntityType Name="SiteCall">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="datetimeCall" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="classificationID" Type="Int32" Nullable="false" />
+    <Property Name="salesRepID" Type="Int32" Nullable="false" />
+    <Property Name="storeID" Type="Int32" Nullable="false" />
+    <Property Name="displayBrands" Type="Int32" />
+    <Property Name="coldBrands" Type="Int32" />
+    <Property Name="largestCases" Type="Int32" />
+    <Property Name="coverage" Type="Int32" />
+    <Property Name="display" Type="Int32" />
+    <Property Name="currentCases" Type="Int32" />
+    <Property Name="total750mlCold" Type="Int32" />
+    <Property Name="schematicFacings" Type="Int32" />
+    <Property Name="coldBox" Type="Int32" />
+    <Property Name="pod" Type="Int32" />
+    <Property Name="cbf" Type="Int32" />
+    <NavigationProperty Name="SalesReps" Relationship="JFEModel.SiteCallSalesRep" FromRole="SiteCall" ToRole="SalesRep" />
+    <NavigationProperty Name="Classification" Relationship="JFEModel.SiteCallClassification" FromRole="SiteCall" ToRole="Classification" />
+    <NavigationProperty Name="Stores" Relationship="JFEModel.SiteCallStore" FromRole="SiteCall" ToRole="Store" />
+    <NavigationProperty Name="Brand" Relationship="JFEModel.BrandSiteCall" FromRole="SiteCall" ToRole="Brand" />
+    <NavigationProperty Name="Brand1" Relationship="JFEModel.BrandSiteCall1" FromRole="SiteCall" ToRole="Brand" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="storeid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="SiteCall" Relationship="JFEModel.SiteCallStore" FromRole="Store" ToRole="SiteCall" />
+  </EntityType>
+  <EntityContainer Name="JFEEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brands" EntityType="Self.Brand" />
+    <EntitySet Name="BrandTypes" EntityType="Self.BrandType" />
+    <EntitySet Name="Classifications" EntityType="Self.Classification" />
+    <EntitySet Name="Managers" EntityType="Self.Manager" />
+    <EntitySet Name="Regions" EntityType="Self.Region" />
+    <EntitySet Name="SalesReps" EntityType="Self.SalesRep" />
+    <EntitySet Name="SiteCalls" EntityType="Self.SiteCall" />
+    <EntitySet Name="Stores" EntityType="Self.Store" />
+    <AssociationSet Name="BrandBrandType" Association="JFEModel.BrandBrandType">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="BrandType" EntitySet="BrandTypes" />
+    </AssociationSet>
+    <AssociationSet Name="RegionManager" Association="JFEModel.RegionManager">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="Manager" EntitySet="Managers" />
+    </AssociationSet>
+    <AssociationSet Name="ManagerSalesRep" Association="JFEModel.ManagerSalesRep">
+      <End Role="Manager" EntitySet="Managers" />
+      <End Role="SalesRep" EntitySet="SalesReps" />
+    </AssociationSet>
+    <AssociationSet Name="SiteCallSalesRep" Association="JFEModel.SiteCallSalesRep">
+      <End Role="SiteCall" EntitySet="SiteCalls" />
+      <End Role="SalesRep" EntitySet="SalesReps" />
+    </AssociationSet>
+    <AssociationSet Name="SiteCallClassification" Association="JFEModel.SiteCallClassification">
+      <End Role="SiteCall" EntitySet="SiteCalls" />
+      <End Role="Classification" EntitySet="Classifications" />
+    </AssociationSet>
+    <AssociationSet Name="SiteCallStore" Association="JFEModel.SiteCallStore">
+      <End Role="SiteCall" EntitySet="SiteCalls" />
+      <End Role="Store" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="BrandSiteCall" Association="JFEModel.BrandSiteCall">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="SiteCall" EntitySet="SiteCalls" />
+    </AssociationSet>
+    <AssociationSet Name="BrandSiteCall1" Association="JFEModel.BrandSiteCall1">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="SiteCall" EntitySet="SiteCalls" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="BrandBrandType">
+    <End Type="JFEModel.Brand" Role="Brand" Multiplicity="*" />
+    <End Type="JFEModel.BrandType" Role="BrandType" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="BrandType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Brand">
+        <PropertyRef Name="brandTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RegionManager">
+    <End Type="JFEModel.Region" Role="Region" Multiplicity="0..1" />
+    <End Type="JFEModel.Manager" Role="Manager" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Manager">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ManagerSalesRep">
+    <End Type="JFEModel.Manager" Role="Manager" Multiplicity="0..1" />
+    <End Type="JFEModel.SalesRep" Role="SalesRep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manager">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SalesRep">
+        <PropertyRef Name="managerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SiteCallSalesRep">
+    <End Type="JFEModel.SiteCall" Role="SiteCall" Multiplicity="*" />
+    <End Type="JFEModel.SalesRep" Role="SalesRep" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="SalesRep">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SiteCall">
+        <PropertyRef Name="salesRepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SiteCallClassification">
+    <End Type="JFEModel.SiteCall" Role="SiteCall" Multiplicity="*" />
+    <End Type="JFEModel.Classification" Role="Classification" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Classification">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SiteCall">
+        <PropertyRef Name="classificationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SiteCallStore">
+    <End Type="JFEModel.SiteCall" Role="SiteCall" Multiplicity="*" />
+    <End Type="JFEModel.Store" Role="Store" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SiteCall">
+        <PropertyRef Name="storeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BrandSiteCall">
+    <End Type="JFEModel.Brand" Role="Brand" Multiplicity="0..1" />
+    <End Type="JFEModel.SiteCall" Role="SiteCall" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SiteCall">
+        <PropertyRef Name="displayBrands" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BrandSiteCall1">
+    <End Type="JFEModel.Brand" Role="Brand" Multiplicity="0..1" />
+    <End Type="JFEModel.SiteCall" Role="SiteCall" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SiteCall">
+        <PropertyRef Name="coldBrands" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

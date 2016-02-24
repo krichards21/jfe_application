@@ -29,6 +29,7 @@
     <EntitySetMapping Name="Managers">
       <EntityTypeMapping TypeName="JFEModel.Manager">
         <MappingFragment StoreEntitySet="Manager">
+          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="managerRefNum" ColumnName="managerRefNum" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="RegionID" ColumnName="RegionID" />

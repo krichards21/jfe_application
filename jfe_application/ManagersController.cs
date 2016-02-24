@@ -47,7 +47,7 @@ namespace jfe_application
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,RegionID,managerRefNum")] Manager manager)
+        public ActionResult Create([Bind(Include = "Id,RegionID,managerRefNum,name")] Manager manager)
         {
             if (ModelState.IsValid)
             {

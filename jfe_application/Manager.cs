@@ -23,6 +23,7 @@ namespace jfe_application
         public int Id { get; set; }
         public Nullable<int> RegionID { get; set; }
         public Nullable<int> managerRefNum { get; set; }
+        public string name { get; set; }
     
         public virtual Region Region { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

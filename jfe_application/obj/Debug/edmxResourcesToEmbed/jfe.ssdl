@@ -29,6 +29,7 @@
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="managerRefNum" Type="int" />
     <Property Name="RegionID" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="Region">
     <Key>

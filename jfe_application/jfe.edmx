@@ -34,6 +34,7 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="managerRefNum" Type="int" />
           <Property Name="RegionID" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="Region">
           <Key>
@@ -85,6 +86,7 @@
           <Property Name="city" Type="varchar" MaxLength="50" />
           <Property Name="state" Type="varchar" MaxLength="2" />
           <Property Name="zip" Type="nchar" MaxLength="10" />
+          <Property Name="GoogleMap" Type="varchar(max)" />
         </EntityType>
         <EntityContainer Name="JFEModelStoreContainer">
           <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
@@ -136,6 +138,7 @@
           <NavigationProperty Name="Region" Relationship="JFEModel.RegionManager" FromRole="Manager" ToRole="Region" />
           <NavigationProperty Name="SalesReps" Relationship="JFEModel.ManagerSalesRep" FromRole="Manager" ToRole="SalesRep" />
           <Property Name="managerRefNum" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Region">
           <Key>
@@ -196,6 +199,7 @@
           <Property Name="state" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
           <Property Name="zip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="SiteCall" Relationship="JFEModel.SiteCallStore" FromRole="Store" ToRole="SiteCall" />
+          <Property Name="GoogleMap" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="JFEEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Brands" EntityType="Self.Brand" />
@@ -369,6 +373,7 @@
           <EntitySetMapping Name="Managers">
             <EntityTypeMapping TypeName="JFEModel.Manager">
               <MappingFragment StoreEntitySet="Manager">
+                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="managerRefNum" ColumnName="managerRefNum" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="RegionID" ColumnName="RegionID" />
@@ -419,6 +424,7 @@
           <EntitySetMapping Name="Stores">
             <EntityTypeMapping TypeName="JFEModel.Store">
               <MappingFragment StoreEntitySet="Store">
+                <ScalarProperty Name="GoogleMap" ColumnName="GoogleMap" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="storeid" ColumnName="storeid" />
                 <ScalarProperty Name="name" ColumnName="name" />

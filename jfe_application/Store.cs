@@ -28,6 +28,7 @@ namespace jfe_application
         public string city { get; set; }
         public string state { get; set; }
         public string zip { get; set; }
+        public string GoogleMap { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SiteCall> SiteCall { get; set; }

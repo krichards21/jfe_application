@@ -36,6 +36,7 @@
     <NavigationProperty Name="Region" Relationship="JFEModel.RegionManager" FromRole="Manager" ToRole="Region" />
     <NavigationProperty Name="SalesReps" Relationship="JFEModel.ManagerSalesRep" FromRole="Manager" ToRole="SalesRep" />
     <Property Name="managerRefNum" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Region">
     <Key>

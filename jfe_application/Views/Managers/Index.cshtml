@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.managerRefNum)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Region.name)
         </th>
         <th></th>
@@ -24,6 +27,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.managerRefNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Region.name)

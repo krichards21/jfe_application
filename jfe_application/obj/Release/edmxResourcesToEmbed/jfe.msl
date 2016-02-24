@@ -29,6 +29,7 @@
     <EntitySetMapping Name="Managers">
       <EntityTypeMapping TypeName="JFEModel.Manager">
         <MappingFragment StoreEntitySet="Manager">
+          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="managerRefNum" ColumnName="managerRefNum" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="RegionID" ColumnName="RegionID" />
@@ -79,6 +80,7 @@
     <EntitySetMapping Name="Stores">
       <EntityTypeMapping TypeName="JFEModel.Store">
         <MappingFragment StoreEntitySet="Store">
+          <ScalarProperty Name="GoogleMap" ColumnName="GoogleMap" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="storeid" ColumnName="storeid" />
           <ScalarProperty Name="name" ColumnName="name" />

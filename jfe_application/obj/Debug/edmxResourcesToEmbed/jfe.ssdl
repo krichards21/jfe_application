@@ -81,6 +81,7 @@
     <Property Name="city" Type="varchar" MaxLength="50" />
     <Property Name="state" Type="varchar" MaxLength="2" />
     <Property Name="zip" Type="nchar" MaxLength="10" />
+    <Property Name="GoogleMap" Type="varchar(max)" />
   </EntityType>
   <EntityContainer Name="JFEModelStoreContainer">
     <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />

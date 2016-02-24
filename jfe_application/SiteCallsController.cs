@@ -38,6 +38,7 @@ namespace jfe_application
         // GET: SiteCalls/Create
         public ActionResult Create()
         {
+            ViewBag.datetimeCreated = DateTime.Now.ToLocalTime();
             ViewBag.salesRepID = new SelectList(db.SalesReps, "Id", "name");
             ViewBag.classificationID = new SelectList(db.Classifications, "Id", "name");
             ViewBag.storeID = new SelectList(db.Stores, "Id", "storeid");
@@ -51,8 +52,9 @@ namespace jfe_application
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,datetimeCall,classificationID,salesRepID,storeID,displayBrands,coldBrands,largestCases,coverage,display,currentCases,total750mlCold,schematicFacings,coldBox,pod,cbf,notes")] SiteCall siteCall)
+        public ActionResult Create([Bind(Include = "datetimeCall,classificationID,salesRepID,storeID,displayBrands,coldBrands,largestCases,coverage,display,currentCases,total750mlCold,schematicFacings,coldBox,pod,cbf,notes")] SiteCall siteCall)
         {
+            siteCall.Id = db.SiteCalls.Max(s => s.Id) +1;
             if (ModelState.IsValid)
             {
                 db.SiteCalls.Add(siteCall);

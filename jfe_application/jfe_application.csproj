@@ -243,6 +243,7 @@
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
     <Compile Include="RegionsController.cs" />
+    <Compile Include="ReportsManagerController.cs" />
     <Compile Include="SalesRep.cs">
       <DependentUpon>jfe.tt</DependentUpon>
     </Compile>
@@ -264,6 +265,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\carousel2_arcanum.jpg" />
+    <Content Include="Images\DesignMind-700px.gif" />
+    <Content Include="Images\jackson_family_logo.png" />
     <Content Include="jfe.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>jfe.edmx</DependentUpon>
@@ -377,6 +381,7 @@
     <Content Include="Views\Stores\Index.cshtml" />
     <Content Include="Views\SiteCalls\StoreForm.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
+    <Content Include="Views\ReportsManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -391,6 +396,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

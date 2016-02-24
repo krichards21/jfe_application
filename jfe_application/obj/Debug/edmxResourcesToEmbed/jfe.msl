@@ -80,6 +80,7 @@
     <EntitySetMapping Name="Stores">
       <EntityTypeMapping TypeName="JFEModel.Store">
         <MappingFragment StoreEntitySet="Store">
+          <ScalarProperty Name="GoogleMap" ColumnName="GoogleMap" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="storeid" ColumnName="storeid" />
           <ScalarProperty Name="name" ColumnName="name" />

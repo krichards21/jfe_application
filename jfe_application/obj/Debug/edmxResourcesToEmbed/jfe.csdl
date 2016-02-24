@@ -97,6 +97,7 @@
     <Property Name="state" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
     <Property Name="zip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <NavigationProperty Name="SiteCall" Relationship="JFEModel.SiteCallStore" FromRole="Store" ToRole="SiteCall" />
+    <Property Name="GoogleMap" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="JFEEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Brands" EntityType="Self.Brand" />

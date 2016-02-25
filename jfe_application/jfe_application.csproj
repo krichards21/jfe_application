@@ -268,6 +268,7 @@
     <Content Include="Images\carousel2_arcanum.jpg" />
     <Content Include="Images\DesignMind-700px.gif" />
     <Content Include="Images\jackson_family_logo.png" />
+    <Content Include="Images\regal-logo.png" />
     <Content Include="jfe.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>jfe.edmx</DependentUpon>

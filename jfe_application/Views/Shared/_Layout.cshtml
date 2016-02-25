@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Jackson Family Wineries</title>
+    <title>@ViewBag.Title - Regal Wine Co.</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style type="text/css">
@@ -36,7 +36,7 @@
                 </button>
                 <div class="hidden-sm hidden-xs">
                     <a href="@Url.Action("Index", "Home")" title="List View" class="links">
-                        <img alt="List View" src="@Url.Content("~/Images/jackson_family_logo.png")">
+                        <img alt="List View" src="@Url.Content("~/Images/regal-logo.png")" style="width:30%; height:auto;">
                     </a>
                 </div>
                 @*@Html.ActionLink("Field Service Manager", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
@@ -44,8 +44,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Site Call", "Create", "SiteCalls")</li>
-                    <li>@Html.ActionLink("Manager", "Index", "Management")</li>
+                    <li>@Html.ActionLink("Sales Tracker", "Create", "SiteCalls")</li>
+                    <li>@Html.ActionLink("Admin", "Index", "Management")</li>
                 </ul>
                 @*@Html.Partial("_LoginPartial")*@
             </div>
@@ -55,7 +55,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Jackson Family Enterprises powered by DesignMind</p>
+            <p>&copy; @DateTime.Now.Year - Regal Wine Co powered by DesignMind</p>
             <a href="http://www.designmind.com"><img src="~/Images/DesignMind-700px.gif" alt="DesignMind Logo" style="max-width:20%; height: auto;" /></a>
         </footer>
     </div>
